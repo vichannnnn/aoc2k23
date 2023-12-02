@@ -13,15 +13,15 @@ def day_one_part_one():
 
 def day_one_part_two():
     hashmap = {
-        "one": '1',
-        "two": '2',
-        "three": '3',
-        "four": '4',
-        "five": '5',
-        "six": '6',
-        "seven": '7',
-        "eight": '8',
-        "nine": '9',
+        "one": "1",
+        "two": "2",
+        "three": "3",
+        "four": "4",
+        "five": "5",
+        "six": "6",
+        "seven": "7",
+        "eight": "8",
+        "nine": "9",
     }
 
     with open("day1.txt") as f:
@@ -44,8 +44,10 @@ def day_one_part_two():
                 idx_to_digit[start] = digit
                 start += len(word)
 
-        lowest, highest = idx_to_digit[min(idx_to_digit)], idx_to_digit[max(idx_to_digit)]
+        lowest, highest = (
+            idx_to_digit[min(idx_to_digit)],
+            idx_to_digit[max(idx_to_digit)],
+        )
         total += int(lowest + highest)
 
     return total
-
